@@ -192,28 +192,12 @@ export const propFirms: PropFirm[] = [
     instruments: ["Forex", "Indices", "Commodities"],
     maxFunding: "50K",
     supportedPlatforms: ["MT4", "MT5"]
-  }
-];
-
-export function getFirmBySlug(slug: string): PropFirm | undefined {
-  return propFirms.find(firm => firm.slug === slug);
-}
-
-export function getActivePromos(): { firm: PropFirm; codes: PromoCode[] }[] {
-  const now = new Date();
-  return propFirms
-    .map(firm => ({
-      firm,
-      codes: firm.promoCodes.filter(promo => new Date(promo.expiryDate) > now)
-    }))
-    .filter(item => item.codes.length > 0);
-}
-
-// New firms added
-{
-  id: "7",
-  name: "Top Step Funded",
-  slug: "top-step-funded",
+  },
+  // New firms added
+  {
+    id: "7",
+    name: "Top Step Funded",
+    slug: "top-step-funded",
   logo: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=100&h=100&fit=crop",
   rating: {
     "Evaluation Cost": 8,
@@ -1235,3 +1219,17 @@ export function getActivePromos(): { firm: PropFirm; codes: PromoCode[] }[] {
   supportedPlatforms: ["MT4", "MT5"]
 }
 ];
+
+export function getFirmBySlug(slug: string): PropFirm | undefined {
+  return propFirms.find(firm => firm.slug === slug);
+}
+
+export function getActivePromos(): { firm: PropFirm; codes: PromoCode[] }[] {
+  const now = new Date();
+  return propFirms
+    .map(firm => ({
+      firm,
+      codes: firm.promoCodes.filter(promo => new Date(promo.expiryDate) > now)
+    }))
+    .filter(item => item.codes.length > 0);
+}

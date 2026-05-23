@@ -3,19 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: #020617;
-  --foreground: #f1f5f9;
+  --brand: #F59E0B;
+  --brand-glow: rgba(245, 158, 11, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background: #0A0E1A;
+  color: #f1f5f9;
+  line-height: 1.6;
 }
 
 /* Custom scrollbar */
@@ -24,14 +28,124 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #07090F;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #334155;
+  background: #1e2438;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #2a3249;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(245, 158, 11, 0.3);
+  color: #fbbf24;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid #F59E0B;
+  outline-offset: 2px;
+}
+
+/* Rating bar styles */
+.rating-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: #1e2438;
+  overflow: hidden;
+}
+
+.rating-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #F59E0B, #fbbf24);
+  transition: width 0.5s ease-out;
+}
+
+/* Promo card glow effect */
+.promo-card-glow {
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.1), 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Copy button animation */
+.copy-btn {
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: #F59E0B;
+  color: #07090F;
+  transform: scale(1.05);
+}
+
+.copy-btn:active {
+  transform: scale(0.95);
+}
+
+/* Card hover effects */
+.firm-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.firm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(245, 158, 11, 0.2);
+}
+
+/* Hero gradient overlay */
+.hero-bg {
+  position: relative;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 600px;
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(245,158,11,0.12), transparent);
+  pointer-events: none;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #fbbf24, #F59E0B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Badge styles */
+.promo-badge {
+  background: linear-gradient(135deg, rgba(245,158,11,0.2), rgba(251,191,36,0.1));
+  border: 1px solid rgba(245,158,11,0.3);
+}
+
+/* Input styles */
+input, select {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Button base */
+.btn-primary {
+  background: linear-gradient(135deg, #F59E0B, #D97706);
+  color: #07090F;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #fbbf24, #F59E0B);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(245,158,11,0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
 }
