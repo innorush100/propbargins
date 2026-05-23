@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { propFirms } from "@/data/propfirms";
 import { PropFirm, FilterState } from "@/types/propfirm";
+import NewsletterSignup from "@/components/NewsletterSignup";
 
 function RatingBar({ label, value, max = 100 }: { label: string; value: number; max?: number }) {
   const percentage = (value / max) * 100;
@@ -279,6 +280,14 @@ export default function Home() {
                 <span className="text-gradient">PropBargains</span>
               </h1>
             </div>
+            <div className="flex items-center justify-center gap-6 mb-6">
+              <Link href="/" className="text-gray-400 hover:text-amber-400 transition-colors font-medium">
+                Home
+              </Link>
+              <Link href="/blog" className="text-amber-400 hover:text-amber-300 transition-colors font-medium">
+                Blog
+              </Link>
+            </div>
             <p className="text-xl md:text-2xl text-gray-300 font-medium mb-3">
               Your one stop shop for Prop Traders
             </p>
@@ -329,6 +338,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="px-4 pb-10 max-w-6xl mx-auto">
+        <NewsletterSignup />
       </section>
 
       {/* Active Promos Section */}
