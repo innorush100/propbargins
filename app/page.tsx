@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { propFirms } from "@/data/propfirms";
+import { blogPosts } from "@/data/posts";
 import { PropFirm, FilterState } from "@/types/propfirm";
 
 function RatingBar({ label, value, max = 100 }: { label: string; value: number; max?: number }) {
@@ -380,6 +381,36 @@ export default function Home() {
               Subscribe
             </button>
           </form>
+        </div>
+      </section>
+
+      {/* Latest Posts - subtle preview */}
+      <section className="px-4 pb-8 max-w-5xl mx-auto">
+        <div className="border-t border-surface-800 pt-6">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-sm font-bold text-white flex items-center gap-2">
+              <span>📝</span> Latest from the Blog
+            </h2>
+            <Link href="/blog" className="text-xs text-amber-400 hover:text-amber-300 font-medium transition-colors">
+              View All →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {blogPosts
+              .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+              .slice(0, 3)
+              .map((post) => (
+                <Link key={post.id} href={`/blog/${post.slug}`}>
+                  <div className="bg-surface-800/50 border border-surface-700 rounded-lg p-3 hover:border-amber-500/30 transition-all group">
+                    <p className="text-xs text-amber-400 font-medium mb-1">{post.category}</p>
+                    <h3 className="text-sm font-semibold text-white group-hover:text-amber-400 transition-colors mb-1 line-clamp-2 leading-snug">
+                      {post.title}
+                    </h3>
+                    <p className="text-xs text-gray-500">{post.date}</p>
+                  </div>
+                </Link>
+              ))}
+          </div>
         </div>
       </section>
 
