@@ -232,6 +232,143 @@ export const blogPosts: BlogPost[] = [
     relatedFirms: ["ftmo"],
   },
   {
+    id: "6",
+    slug: "commission-matters-prop-firm-costs",
+    title: "Commission Matters: How Prop Firm Fees Affect Your Real Payout",
+    excerpt:
+      "Most traders obsess over profit splits but ignore commissions. Here's why that's a costly mistake — and the real cost of trading with each prop firm.",
+    content: `
+<p class="mb-4">When traders compare prop firms, the conversation almost always lands on profit splits. 80% vs 90%. The difference seems simple enough—pick the higher number, right? But there's a hidden variable that quietly erodes your earnings month after month, and most traders don't factor it into their calculations until they've already left money on the table: <strong>commissions</strong>.</p>
+
+<p class="mb-4">Commissions in prop trading aren't always called "commissions." They hide in spreads, overnight fees, and per-trade charges that quietly add up. A firm advertising a 90% profit split sounds incredible—until you realize their commission structure takes an extra 15-20% off your effective earnings. Meanwhile, a firm with an 80% split and low commissions might actually pay you more.</p>
+
+<h2 class="text-xl font-bold text-white mt-8 mb-4">What Commissions Actually Are</h2>
+<p class="mb-4">In the prop trading world, "commissions" is an umbrella term covering several distinct costs:</p>
+
+<h3 class="text-lg font-semibold text-amber-400 mt-6 mb-3">Per-Trade Commissions</h3>
+<p class="mb-4">Some firms charge a fixed dollar amount every time you open and close a trade. This is common with futures prop firms—$2-4 per round trip is typical. On a high-volume day trading account, these charges compound quickly.</p>
+
+<h3 class="text-lg font-semibold text-amber-400 mt-6 mb-3">Spread Markups</h3>
+<p class="mb-4">Many forex and CFD prop firms don't charge explicit commissions. Instead, they widen the spread you pay compared to the raw interbank rate. This markup is invisible on your statement but hits every single trade. If a firm offers "commission-free" trading, they're almost certainly making money through wider spreads. A raw EUR/USD spread might be 0.1 pips, but a prop firm's marked-up spread could be 0.5-1.0 pips—and that difference is pure profit for them.</p>
+
+<h3 class="text-lg font-semibold text-amber-400 mt-6 mb-3">Overnight Financing (Swap Fees)</h3>
+<p class="mb-4">If you hold positions overnight, you may be charged a financing fee. This varies by instrument and direction, but it can add up for swing traders or anyone who holds positions for more than a day. Some firms also offer swap-free accounts, but this often comes with trade-offs.</p>
+
+<h3 class="text-lg font-semibold text-amber-400 mt-6 mb-3">Platform or Account Fees</h3>
+<p class="mb-4">Some firms charge monthly subscription fees, data fees, or account maintenance costs. These are less common but worth checking before you sign up.</p>
+
+<h2 class="text-xl font-bold text-white mt-8 mb-4">The Real Cost: A Month in the Life</h2>
+<p class="mb-4">Let's look at a realistic scenario for an active day trader:</p>
+
+<p class="mb-4"><strong>Trader Profile:</strong> Trades 20 days/month, 5 round-trip trades per day = 100 round-trip trades/month. Average trade size: 1 standard lot. Average spread on their primary pair (EUR/USD): 1.0 pip.</p>
+
+<p class="mb-4">On a standard account with no markup, the spread cost is essentially 0—they're paying the raw market spread. But on a prop firm account with a 0.5-pip markup, that extra cost on 100 trades at 1 standard lot each:</p>
+
+<p class="mb-4"><strong>Spread markup cost = 0.5 pips × 100 trades × $10/pip = $500/month</strong></p>
+
+<p class="mb-4">Now add per-trade commissions if the firm charges them. Say $2/round trip × 100 trades = $200/month.</p>
+
+<p class="mb-4"><strong>Total commission drag: ~$700/month</strong></p>
+
+<p class="mb-4">This trader is paying $700/month in hidden costs—before they calculate their profit split. If they're making $3,000/month in gross profits and have a 90% split, their net payout is $2,700. But subtracting $700 in commissions brings their real take-home to just 67% of gross profits. Meanwhile, a trader at an 80% split firm with tight spreads might only pay $200/month in total costs—and end up with more money in their pocket.</p>
+
+<h2 class="text-xl font-bold text-white mt-8 mb-4">Commission Comparison: Major Prop Firms</h2>
+<p class="mb-4">Here's how the major prop firms stack up on commissions. These are based on current trader reports and publicly available data—always verify with the firm directly before opening an account.</p>
+
+| Firm | Commission Structure | Spread Model | Overnight Fees | Notes |
+|------|---------------------|--------------|----------------|-------|
+| <strong>Apex Trader Funding</strong> | $0 (forex) | Raw + small markup | Variable | Futures: $2.25/round turn |
+| <strong>Top Step Funded</strong> | $0 | Commission-free model | Variable | Spread costs built into pricing |
+| <strong>FTMO</strong> | From $3.50/round lot | Raw spreads available | Competitive | Lower commissions on higher-tier accounts |
+| <strong>The Trading Pit</strong> | From $3/round lot | Raw ECN spreads | Competitive | Good liquidity, tight raw spreads |
+| <strong>UProfit</strong> | $0 (spread-only) | Wider spreads on some pairs | Variable | Higher spread markup compensates for no commissions |
+| <strong>Fidelitas Trading</strong> | From $3.50/round lot | Raw spreads available | Competitive | Volume discounts available |
+| <strong>3 Step Funded</strong> | From $2.50/round lot | Raw spreads | Reasonable | Lower-cost option for high-volume traders |
+| <strong>MyFundedFutures</strong> | $2.50-3.50/round turn | Futures-specific | N/A | Futures-only, transparent pricing |
+
+<h2 class="text-xl font-bold text-white mt-8 mb-4">Why Spread Markups Matter More Than You Think</h2>
+<p class="mb-4">Spread markups are the sneakiest cost in prop trading because they're invisible. You don't see a line item that says "spread markup: $X." It's just baked into the price you pay. But mathematically, it works like a silent tax on every trade.</p>
+
+<p class="mb-4">Consider a scalper who takes 20 trades per day. Even a 0.3-pip markup—barely noticeable on any single trade—costs them:</p>
+
+<p class="mb-4"><strong>0.3 pips × 20 trades × 22 trading days × $10/pip = $1,320/month</strong></p>
+
+<p class="mb-4">That's $1,320/month in pure markup cost. Over a year, it's nearly $16,000. Most traders never calculate this number, which is exactly why firms can get away with wider spreads.</p>
+
+<p class="mb-4">The traders who are most harmed by spread markups are high-frequency traders—scalpers, grid traders, and anyone running EA-based strategies that open and close dozens of positions daily. For these traders, even a 0.2-pip difference can mean the difference between profitability and going broke.</p>
+
+<h2 class="text-xl font-bold text-white mt-8 mb-4">The Break-Even Calculation</h2>
+<p class="mb-4">So at what point do commissions become irrelevant? Put another way: how profitable do you need to be for commission costs to matter less than the profit split advantage?</p>
+
+<p class="mb-4">Here's the formula:</p>
+
+<p class="mb-4"><strong>Commission-adjusted take-home = (Gross Profits - Commissions) × Profit Split</strong></p>
+
+<p class="mb-4">Let's compare two scenarios:</p>
+
+<p class="mb-4"><strong>Firm A:</strong> 90% profit split, $700/month in commissions<br/>
+<strong>Firm B:</strong> 80% profit split, $200/month in commissions</p>
+
+<p class="mb-4">At $3,000/month gross profit:</p>
+<ul class="list-disc pl-6 mb-4 space-y-2 text-gray-300">
+  <li>Firm A: ($3,000 - $700) × 90% = $2,070</li>
+  <li>Firm B: ($3,000 - $200) × 80% = $2,240</li>
+</ul>
+<p class="mb-4">Firm B pays more even with the lower split. The lower-commission firm wins at this profit level.</p>
+
+<p class="mb-4">At $5,000/month gross profit:</p>
+<ul class="list-disc pl-6 mb-4 space-y-2 text-gray-300">
+  <li>Firm A: ($5,000 - $700) × 90% = $3,870</li>
+  <li>Firm B: ($5,000 - $200) × 80% = $3,840</li>
+</ul>
+<p class="mb-4">Now Firm A's higher split starts to matter. The break-even point is approximately $4,500/month in gross profits for these specific numbers—but that threshold shifts based on each firm's actual commission structure.</p>
+
+<p class="mb-4">The key insight: <strong>for most traders, especially those starting out or trading moderately, commissions have a bigger impact on net payouts than profit splits do.</strong> The traders who benefit most from high profit splits are consistently profitable, high-volume traders generating large gross profits.</p>
+
+<h2 class="text-xl font-bold text-white mt-8 mb-4">Which Firms Have the Lowest Commissions?</h2>
+
+<p class="mb-4">Based on current data, these firms offer the best commission structures:</p>
+
+<h3 class="text-lg font-semibold text-amber-400 mt-6 mb-3">Best for Forex: FTMO and The Trading Pit</h3>
+<p class="mb-4">Both offer raw spreads with transparent per-lot commissions in the $3-3.50 range. High-volume traders can negotiate lower rates. The spread markup is minimal compared to "commission-free" competitors.</p>
+
+<h3 class="text-lg font-semibold text-amber-400 mt-6 mb-3">Best for Futures: MyFundedFutures</h3>
+<p class="mb-4">At $2.50-3.50 per round turn on futures, MFF is one of the most cost-effective options. Their flat-fee structure is predictable and scales reasonably well with volume.</p>
+
+<h3 class="text-lg font-semibold text-amber-400 mt-6 mb-3">Watch Out For: "Commission-Free" Firms</h3>
+<p class="mb-4">UProfit and similar firms advertising 0% commissions are worth scrutinizing. They're making money through wider spreads—typically 0.5-1.0 pips wider than raw market spreads on major pairs. For low-volume traders, this might be fine. For active day traders, the spread markup typically exceeds what a per-commission model would cost.</p>
+
+<h2 class="text-xl font-bold text-white mt-8 mb-4">Tips for Minimizing Commission Impact</h2>
+
+<h3 class="text-lg font-semibold text-amber-400 mt-6 mb-3">1. Calculate True Cost Before Choosing a Firm</h3>
+<p class="mb-4">Don't just compare profit splits. Estimate your monthly trade volume, calculate expected spread costs and commissions for each firm, then compare net take-home. Most traders who skip this step leave thousands per year on the table.</p>
+
+<h3 class="text-lg font-semibold text-amber-400 mt-6 mb-3">2. Trade Larger Timeframes When Possible</h3>
+<p class="mb-4">Swing traders and position traders naturally trade less frequently, which means fewer commission impacts per month. If your strategy can work on 4H or daily charts, you'll pay dramatically less in commissions than a scalper—even if you're trading the same size.</p>
+
+<h3 class="text-lg font-semibold text-amber-400 mt-6 mb-3">3. Focus on Major Pairs and Instruments</h3>
+<p class="mb-4">Exotic pairs and less-liquid instruments have dramatically wider spreads. EUR/USD might have a 0.5-pip markup, but USD/SEK could have a 10-pip markup. The big players are worth the spread; the illiquid stuff isn't.</p>
+
+<h3 class="text-lg font-semibold text-amber-400 mt-6 mb-3">4. Negotiate If You're a High-Volume Trader</h3>
+<p class="mb-4">Most prop firms have volume-based discounts on commissions. If you're trading 50+ lots per month, reach out to account management and ask about reduced rates. Even a $0.50/lot reduction compounds into significant savings over a year.</p>
+
+<h3 class="text-lg font-semibold text-amber-400 mt-6 mb-3">5. Consider the Instrument Class</h3>
+<p class="mb-4">If commissions are a major concern, futures traders often have more transparent and competitive commission structures than forex/CFD traders. MyFundedFutures and similar futures-focused firms typically beat forex prop firms on pure cost per trade.</p>
+
+<h2 class="text-xl font-bold text-white mt-8 mb-4">The Bottom Line</h2>
+<p class="mb-4">Commissions are the most overlooked factor in prop firm selection. Every firm wants to talk about their profit split—it's the marketing headline. But the traders who are serious about long-term profitability know to look at the total cost structure and calculate their real take-home.</p>
+
+<p class="mb-4">A 90% profit split sounds amazing. But if the commission drag costs you $800/month more than an 80% split competitor, you'd have been better off with the "lower" split. Do the math. The numbers don't lie—and they might change which firm you choose.</p>
+    `,
+    category: "Guides",
+    date: "2026-05-20",
+    author: "David Park",
+    readTime: "7 min",
+    keywords: ["prop firm commissions", "prop firm fees", "trading costs", "payout calculation"],
+    featured: false,
+    relatedFirms: ["apex-trader-funding", "top-step-funded", "ftmo", "the-trading-pit", "uprofut"],
+  },
+  {
     id: "5",
     slug: "what-is-prop-firm-profit-split",
     title: "What is a Prop Firm Profit Split?",
