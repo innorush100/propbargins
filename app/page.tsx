@@ -74,7 +74,7 @@ function FirmCard({ firm }: { firm: PropFirm }) {
               <h3 className="font-bold text-sm text-white group-hover:text-amber-400 transition-colors">
                 {firm.name}
               </h3>
-              <p className="text-xs text-gray-500">Est. {firm.established}</p>
+              <p className="text-xs text-gray-500">Est. {firm.established ?? "Data being verified"}</p>
             </div>
           </div>
           <div className="text-right flex-shrink-0 ml-3">

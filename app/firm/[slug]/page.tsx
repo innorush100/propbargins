@@ -53,7 +53,7 @@ export default function FirmPage({ params }: Props) {
             <div className="flex items-start justify-between">
               <div>
                 <h1 className="text-3xl font-bold text-white mb-1">{firm.name}</h1>
-                <p className="text-gray-500">Est. {firm.established}</p>
+                <p className="text-gray-500">Est. {firm.established ?? "Data being verified"}</p>
               </div>
               <div className="text-right">
                 <div className="text-4xl font-bold text-emerald-400">{firm.overallScore}</div>
@@ -66,7 +66,7 @@ export default function FirmPage({ params }: Props) {
         <p className="mt-4 text-gray-300">{firm.description}</p>
 
         <div className="flex flex-wrap gap-2 mt-4">
-          {firm.instruments.map((inst) => (
+          {firm.instruments?.map((inst) => (
             <span key={inst} className="text-xs bg-gray-800 text-gray-400 px-3 py-1 rounded-full">
               {inst}
             </span>
@@ -125,7 +125,7 @@ export default function FirmPage({ params }: Props) {
             </div>
             <div className="flex justify-between">
               <span className="text-gray-500">Platforms</span>
-              <span className="text-white">{firm.supportedPlatforms.join(", ")}</span>
+              <span className="text-white">{firm.supportedPlatforms?.join(", ") ?? "Contact firm"}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-500">Profit Split</span>

@@ -27,10 +27,11 @@ export interface PropFirm {
   description: string;
   features: string[];
   promoCodes: PromoCode[];
-  established: number;
-  instruments: string[];
-  maxFunding: string;
-  supportedPlatforms: string[];
+  // Optional fields - data being verified
+  established?: number;
+  instruments?: string[];
+  maxFunding?: string;
+  supportedPlatforms?: string[];
   // Commission info per round trip (when known)
   commissionInfo?: {
     forex?: string;
