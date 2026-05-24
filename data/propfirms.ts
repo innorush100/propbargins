@@ -22,8 +22,8 @@ export const propFirms: PropFirm[] = [
     promoCodes: [
       {
         code: "PFR10",
-        description: "10% discount on evaluation fees",
-        discount: "10%",
+        description: "Check site for current offer",
+        discount: "N/A",
         expiryDate: "2026-12-31",
         affiliateLink: "https://thetradingpit.com/promo/PFR10"
       }
@@ -54,8 +54,8 @@ export const propFirms: PropFirm[] = [
     promoCodes: [
       {
         code: "PFR15",
-        description: "15% discount on first evaluation",
-        discount: "15%",
+        description: "Check site for current offer",
+        discount: "N/A",
         expiryDate: "2026-06-30",
         affiliateLink: "https://ftmo.com/promo/PFR15"
       }
@@ -86,8 +86,8 @@ export const propFirms: PropFirm[] = [
     promoCodes: [
       {
         code: "LAUNCH20",
-        description: "20% off evaluation - Launch special",
-        discount: "20%",
+        description: "Check site for current offer",
+        discount: "N/A",
         expiryDate: "2026-05-31",
         affiliateLink: "https://fundedtradingplus.com/promo/LAUNCH20"
       }
@@ -118,8 +118,8 @@ export const propFirms: PropFirm[] = [
     promoCodes: [
       {
         code: "ELITE25",
-        description: "25% discount on Elite evaluation",
-        discount: "25%",
+        description: "Check site for current offer",
+        discount: "N/A",
         expiryDate: "2026-08-31",
         affiliateLink: "https://bcvault.io/promo/ELITE25"
       }
@@ -150,8 +150,8 @@ export const propFirms: PropFirm[] = [
     promoCodes: [
       {
         code: "Apex10",
-        description: "10% bonus on first payout",
-        discount: "10%",
+        description: "Check site for current offer",
+        discount: "N/A",
         expiryDate: "2026-07-31",
         affiliateLink: "https://apextraderfunding.com/promo/Apex10"
       }
@@ -187,8 +187,8 @@ export const propFirms: PropFirm[] = [
     promoCodes: [
       {
         code: "WELCOME15",
-        description: "15% discount for new traders",
-        discount: "15%",
+        description: "Check site for current offer",
+        discount: "N/A",
         expiryDate: "2026-12-31",
         affiliateLink: "https://myfundedfx.com/promo/WELCOME15"
       }
@@ -220,8 +220,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "TOPSTEP15",
-      description: "15% discount on evaluation fees",
-      discount: "15%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-12-31",
       affiliateLink: "https://topstepfunded.com/promo/TOPSTEP15"
     }
@@ -252,8 +252,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "TRADEDAY20",
-      description: "20% off first evaluation",
-      discount: "20%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2027-01-31",
       affiliateLink: "https://tradeday.com/promo/TRADEDAY20"
     }
@@ -284,8 +284,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "UPROFIT10",
-      description: "10% bonus on first payout",
-      discount: "10%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-09-30",
       affiliateLink: "https://uprofut.com/promo/UPROFIT10"
     }
@@ -316,8 +316,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "FIDEL25",
-      description: "25% discount on evaluation",
-      discount: "25%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-11-30",
       affiliateLink: "https://fidelitastrading.com/promo/FIDEL25"
     }
@@ -348,8 +348,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "FUNDED15",
-      description: "15% off evaluation fees",
-      discount: "15%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-08-31",
       affiliateLink: "https://thefundedtrader.com/promo/FUNDED15"
     }
@@ -380,8 +380,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "BLUEBERRY10",
-      description: "10% discount on evaluation",
-      discount: "10%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-10-31",
       affiliateLink: "https://blueberryfunded.com/promo/BLUEBERRY10"
     }
@@ -412,8 +412,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "AUDACITY20",
-      description: "20% off evaluation fees",
-      discount: "20%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2027-02-28",
       affiliateLink: "https://audacitycapital.io/promo/AUDACITY20"
     }
@@ -444,8 +444,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "E8WELCOME",
-      description: "15% new trader discount",
-      discount: "15%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-12-31",
       affiliateLink: "https://e8funding.com/promo/E8WELCOME"
     }
@@ -476,8 +476,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "ALPHA10",
-      description: "10% first payout bonus",
-      discount: "10%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-09-30",
       affiliateLink: "https://alphacapitaltrading.com/promo/ALPHA10"
     }
@@ -508,8 +508,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "NOVA15",
-      description: "15% discount on evaluation",
-      discount: "15%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-07-31",
       affiliateLink: "https://novafunded.com/promo/NOVA15"
     }
@@ -540,8 +540,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "CHVIOUS10",
-      description: "10% bonus on first payout",
-      discount: "10%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-11-30",
       affiliateLink: "https://chvious.com/promo/CHVIOUS10"
     }
@@ -572,8 +572,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "SURESTEP20",
-      description: "20% off evaluation",
-      discount: "20%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-08-31",
       affiliateLink: "https://surestep.io/promo/SURESTEP20"
     }
@@ -604,8 +604,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "OSPREY15",
-      description: "15% discount on evaluation",
-      discount: "15%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-10-31",
       affiliateLink: "https://ospreytrading.com/promo/OSPREY15"
     }
@@ -636,8 +636,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "CITY10",
-      description: "10% new trader discount",
-      discount: "10%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-09-30",
       affiliateLink: "https://citytraders.io/promo/CITY10"
     }
@@ -668,8 +668,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "THUNDER20",
-      description: "20% off evaluation fees",
-      discount: "20%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2027-01-31",
       affiliateLink: "https://thunderfunded.com/promo/THUNDER20"
     }
@@ -700,8 +700,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "IMPERIUM15",
-      description: "15% discount on evaluation",
-      discount: "15%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-12-31",
       affiliateLink: "https://fximperium.com/promo/IMPERIUM15"
     }
@@ -732,8 +732,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "JACKED10",
-      description: "10% first evaluation discount",
-      discount: "10%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-08-31",
       affiliateLink: "https://purejackedtrading.com/promo/JACKED10"
     }
@@ -764,8 +764,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "SMART15",
-      description: "15% off evaluation",
-      discount: "15%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-10-31",
       affiliateLink: "https://smartproptrader.com/promo/SMART15"
     }
@@ -796,8 +796,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "MAVEN20",
-      description: "20% discount on first eval",
-      discount: "20%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-11-30",
       affiliateLink: "https://maventrading.com/promo/MAVEN20"
     }
@@ -828,8 +828,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "LAZY10",
-      description: "10% new trader discount",
-      discount: "10%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-07-31",
       affiliateLink: "https://lazytrader.co/promo/LAZY10"
     }
@@ -860,8 +860,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "AXIOM15",
-      description: "15% off evaluation",
-      discount: "15%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-12-31",
       affiliateLink: "https://axiomcapital.io/promo/AXIOM15"
     }
@@ -892,8 +892,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "LIONS15",
-      description: "15% discount on evaluation",
-      discount: "15%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-09-30",
       affiliateLink: "https://lionslivefunded.com/promo/LIONS15"
     }
@@ -924,8 +924,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "FUSION20",
-      description: "20% off evaluation fees",
-      discount: "20%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2027-02-28",
       affiliateLink: "https://fusionfunded.com/promo/FUSION20"
     }
@@ -956,8 +956,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "SASTIMES10",
-      description: "10% new trader discount",
-      discount: "10%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-08-31",
       affiliateLink: "https://sastimes.com/promo/SASTIMES10"
     }
@@ -988,8 +988,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "MFF20",
-      description: "20% discount on evaluation",
-      discount: "20%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-12-31",
       affiliateLink: "https://myfundedfutures.com/promo/MFF20"
     }
@@ -1020,8 +1020,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "NEXTSTEP15",
-      description: "15% off evaluation",
-      discount: "15%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-10-31",
       affiliateLink: "https://nextstepfunded.com/promo/NEXTSTEP15"
     }
@@ -1052,8 +1052,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "RISINGSUN10",
-      description: "10% new trader discount",
-      discount: "10%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-09-30",
       affiliateLink: "https://risingsuntrading.com/promo/RISINGSUN10"
     }
@@ -1084,8 +1084,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "3STEP25",
-      description: "25% discount on evaluation",
-      discount: "25%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2027-01-31",
       affiliateLink: "https://3stepfunded.com/promo/3STEP25"
     }
@@ -1116,8 +1116,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "ELITE20",
-      description: "20% off first evaluation",
-      discount: "20%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-11-30",
       affiliateLink: "https://elitetraderfunding.com/promo/ELITE20"
     }
@@ -1148,8 +1148,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "TIER15",
-      description: "15% first evaluation discount",
-      discount: "15%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-12-31",
       affiliateLink: "https://toptiertraderfunding.com/promo/TIER15"
     }
@@ -1180,8 +1180,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "DISC10",
-      description: "10% new trader discount",
-      discount: "10%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-08-31",
       affiliateLink: "https://discipline-trading.com/promo/DISC10"
     }
@@ -1212,8 +1212,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "FANGAI10",
-      description: "10% discount for new traders",
-      discount: "10%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-09-30",
       affiliateLink: "https://fangaitrading.com/promo/FANGAI10"
     }
@@ -1244,8 +1244,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "TRADEIFY10",
-      description: "10% new trader discount",
-      discount: "10%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-12-31",
       affiliateLink: "https://tradeify.io/promo/TRADEIFY10"
     }
@@ -1280,10 +1280,17 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "TP10",
-      description: "10% first evaluation discount",
-      discount: "10%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-11-30",
       affiliateLink: "https://takeprofittrader.com/promo/TP10"
+    },
+    {
+      code: "NOFEE50",
+      description: "50% off evaluation fee",
+      discount: "50%",
+      expiryDate: "2026-05-26",
+      affiliateLink: "https://takeprofittrader.com/promo/NOFEE50"
     }
   ],
   established: 2021,
@@ -1316,8 +1323,8 @@ export const propFirms: PropFirm[] = [
   promoCodes: [
     {
       code: "LUCID15",
-      description: "15% discount on evaluation",
-      discount: "15%",
+      description: "Check site for current offer",
+      discount: "N/A",
       expiryDate: "2026-12-31",
       affiliateLink: "https://lucidtrading.io/promo/LUCID15"
     }
