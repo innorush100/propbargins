@@ -31,6 +31,12 @@ export interface PropFirm {
   instruments: string[];
   maxFunding: string;
   supportedPlatforms: string[];
+  // Commission info per round trip (when known)
+  commissionInfo?: {
+    forex?: string;
+    futures?: string;
+    notes?: string;
+  };
 }
 
 export interface FilterState {

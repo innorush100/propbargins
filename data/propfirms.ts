@@ -159,7 +159,12 @@ export const propFirms: PropFirm[] = [
     established: 2022,
     instruments: ["Forex", "Indices", "Commodities"],
     maxFunding: "150K",
-    supportedPlatforms: ["MT5"]
+    supportedPlatforms: ["MT5"],
+    commissionInfo: {
+      forex: "~$5-6/round trip",
+      futures: "~$3.50/round trip",
+      notes: "Forex commissions higher than industry average"
+    }
   },
   {
     id: "6",
@@ -1217,6 +1222,114 @@ export const propFirms: PropFirm[] = [
   instruments: ["Forex", "Indices", "Commodities"],
   maxFunding: "50K",
   supportedPlatforms: ["MT4", "MT5"]
+},
+{
+  id: "39",
+  name: "Tradeify",
+  slug: "tradeify",
+  logo: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=100&h=100&fit=crop",
+  rating: {
+    "Evaluation Cost": 6,
+    "Profit Split": 85,
+    "Drawdown Rules": 7,
+    "Payout Speed": 7,
+    "Support Quality": 6,
+    "Platform & Tools": 7
+  },
+  overallScore: 72,
+  affiliateLink: "https://tradeify.io/ref/YOUR_ID_HERE",
+  website: "https://tradeify.io",
+  description: "Growing prop firm with competitive funding options. Known for active trader community and regular challenges.",
+  features: ["85% profit split", "Active community", "5K-100K funding", "MT4/MT5", "Regular promotions"],
+  promoCodes: [
+    {
+      code: "TRADEIFY10",
+      description: "10% new trader discount",
+      discount: "10%",
+      expiryDate: "2026-12-31",
+      affiliateLink: "https://tradeify.io/promo/TRADEIFY10"
+    }
+  ],
+  established: 2022,
+  instruments: ["Forex", "Indices", "Commodities", "Crypto"],
+  maxFunding: "100K",
+  supportedPlatforms: ["MT4", "MT5"],
+  commissionInfo: {
+    forex: "~$7/round trip",
+    notes: "One of the most expensive; higher commission than industry average"
+  }
+},
+{
+  id: "40",
+  name: "TakeProfitTrader",
+  slug: "takeprofit-trader",
+  logo: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=100&h=100&fit=crop",
+  rating: {
+    "Evaluation Cost": 7,
+    "Profit Split": 85,
+    "Drawdown Rules": 8,
+    "Payout Speed": 8,
+    "Support Quality": 8,
+    "Platform & Tools": 8
+  },
+  overallScore: 80,
+  affiliateLink: "https://takeprofittrader.com/ref/YOUR_ID_HERE",
+  website: "https://takeprofittrader.com",
+  description: "Reliable prop firm with trader-friendly policies. Good for discretionary and systematic traders alike.",
+  features: ["85% profit split", "Flexible rules", "10K-150K funding", "MT4/MT5", "Fast verification"],
+  promoCodes: [
+    {
+      code: "TP10",
+      description: "10% first evaluation discount",
+      discount: "10%",
+      expiryDate: "2026-11-30",
+      affiliateLink: "https://takeprofittrader.com/promo/TP10"
+    }
+  ],
+  established: 2021,
+  instruments: ["Forex", "Indices", "Commodities", "Crypto"],
+  maxFunding: "150K",
+  supportedPlatforms: ["MT4", "MT5"],
+  commissionInfo: {
+    forex: "~$4-5/round trip",
+    notes: "Mid-range commissions; competitive for the features offered"
+  }
+},
+{
+  id: "41",
+  name: "Lucid",
+  slug: "lucid",
+  logo: "https://images.unsplash.com/photo-1621416896389-6c1c3f8492df?w=100&h=100&fit=crop",
+  rating: {
+    "Evaluation Cost": 7,
+    "Profit Split": 85,
+    "Drawdown Rules": 8,
+    "Payout Speed": 8,
+    "Support Quality": 8,
+    "Platform & Tools": 8
+  },
+  overallScore: 79,
+  affiliateLink: "https://lucidtrading.io/ref/YOUR_ID_HERE",
+  website: "https://lucidtrading.io",
+  description: "Professional prop firm formerly known as Lucid Markets. Offers solid trading conditions and reliable payouts.",
+  features: ["85% profit split", "Professional setup", "10K-150K funding", "MT4/MT5", "Transparent terms"],
+  promoCodes: [
+    {
+      code: "LUCID15",
+      description: "15% discount on evaluation",
+      discount: "15%",
+      expiryDate: "2026-12-31",
+      affiliateLink: "https://lucidtrading.io/promo/LUCID15"
+    }
+  ],
+  established: 2020,
+  instruments: ["Forex", "Indices", "Commodities", "Crypto"],
+  maxFunding: "150K",
+  supportedPlatforms: ["MT4", "MT5"],
+  commissionInfo: {
+    forex: "~$5/round trip",
+    notes: "Formerly Lucid Markets; standard industry commission rate"
+  }
 }
 ];
 

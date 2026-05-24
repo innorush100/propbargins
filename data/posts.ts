@@ -275,16 +275,89 @@ export const blogPosts: BlogPost[] = [
 <h2 class="text-xl font-bold text-white mt-8 mb-4">Commission Comparison: Major Prop Firms</h2>
 <p class="mb-4">Here's how the major prop firms stack up on commissions. These are based on current trader reports and publicly available data—always verify with the firm directly before opening an account.</p>
 
-| Firm | Commission Structure | Spread Model | Overnight Fees | Notes |
-|------|---------------------|--------------|----------------|-------|
-| <strong>Apex Trader Funding</strong> | $0 (forex) | Raw + small markup | Variable | Futures: $2.25/round turn |
-| <strong>Top Step Funded</strong> | $0 | Commission-free model | Variable | Spread costs built into pricing |
-| <strong>FTMO</strong> | From $3.50/round lot | Raw spreads available | Competitive | Lower commissions on higher-tier accounts |
-| <strong>The Trading Pit</strong> | From $3/round lot | Raw ECN spreads | Competitive | Good liquidity, tight raw spreads |
-| <strong>UProfit</strong> | $0 (spread-only) | Wider spreads on some pairs | Variable | Higher spread markup compensates for no commissions |
-| <strong>Fidelitas Trading</strong> | From $3.50/round lot | Raw spreads available | Competitive | Volume discounts available |
-| <strong>3 Step Funded</strong> | From $2.50/round lot | Raw spreads | Reasonable | Lower-cost option for high-volume traders |
-| <strong>MyFundedFutures</strong> | $2.50-3.50/round turn | Futures-specific | N/A | Futures-only, transparent pricing |
+<!-- Commission Comparison Grid -->
+<div class="space-y-3 my-6">
+  <!-- Header Row -->
+  <div class="hidden md:grid grid-cols-5 gap-3 text-xs font-semibold text-gray-400 uppercase tracking-wider px-1">
+    <div>Firm</div>
+    <div>Commission Structure</div>
+    <div>Spread Model</div>
+    <div>Overnight Fees</div>
+    <div>Notes</div>
+  </div>
+
+  <!-- Apex Trader Funding -->
+  <div class="bg-surface-800 border border-surface-700 rounded-xl p-4 md:grid md:grid-cols-5 md:gap-3 md:items-center">
+    <div class="font-bold text-white mb-2 md:mb-0">Apex Trader Funding</div>
+    <div class="text-sm text-gray-300 mb-2 md:mb-0"><span class="text-amber-400 font-semibold">Forex:</span> ~$5-6/round trip<br/><span class="text-gray-500 text-xs">Futures: ~$3.50/round trip</span></div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Raw + small markup</div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Variable</div>
+    <div class="text-xs text-gray-500">Good for futures traders</div>
+  </div>
+
+  <!-- Top Step Funded -->
+  <div class="bg-surface-900 border border-surface-700 rounded-xl p-4 md:grid md:grid-cols-5 md:gap-3 md:items-center">
+    <div class="font-bold text-white mb-2 md:mb-0">Top Step Funded</div>
+    <div class="text-sm text-gray-300 mb-2 md:mb-0"><span class="text-amber-400 font-semibold">~$4/round trip</span><br/><span class="text-gray-500 text-xs">Spread costs built in</span></div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Commission-free model</div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Variable</div>
+    <div class="text-xs text-gray-500">Community-focused firm</div>
+  </div>
+
+  <!-- FTMO -->
+  <div class="bg-surface-800 border border-surface-700 rounded-xl p-4 md:grid md:grid-cols-5 md:gap-3 md:items-center">
+    <div class="font-bold text-white mb-2 md:mb-0">FTMO</div>
+    <div class="text-sm text-gray-300 mb-2 md:mb-0"><span class="text-amber-400 font-semibold">From ~$3.50/round lot</span></div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Raw spreads available</div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Competitive</div>
+    <div class="text-xs text-gray-500">Lower commissions on higher tiers</div>
+  </div>
+
+  <!-- The Trading Pit -->
+  <div class="bg-surface-900 border border-surface-700 rounded-xl p-4 md:grid md:grid-cols-5 md:gap-3 md:items-center">
+    <div class="font-bold text-white mb-2 md:mb-0">The Trading Pit</div>
+    <div class="text-sm text-gray-300 mb-2 md:mb-0"><span class="text-amber-400 font-semibold">From ~$3/round lot</span></div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Raw ECN spreads</div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Competitive</div>
+    <div class="text-xs text-gray-500">Good liquidity, tight spreads</div>
+  </div>
+
+  <!-- UProfit -->
+  <div class="bg-surface-800 border border-surface-700 rounded-xl p-4 md:grid md:grid-cols-5 md:gap-3 md:items-center">
+    <div class="font-bold text-white mb-2 md:mb-0">UProfit</div>
+    <div class="text-sm text-gray-300 mb-2 md:mb-0"><span class="text-amber-400 font-semibold">Spread-only (~$0)</span><br/><span class="text-gray-500 text-xs">Built into wider spreads</span></div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Wider spreads on some pairs</div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Variable</div>
+    <div class="text-xs text-gray-500">No per-trade commission</div>
+  </div>
+
+  <!-- Fidelitas Trading -->
+  <div class="bg-surface-900 border border-surface-700 rounded-xl p-4 md:grid md:grid-cols-5 md:gap-3 md:items-center">
+    <div class="font-bold text-white mb-2 md:mb-0">Fidelitas Trading</div>
+    <div class="text-sm text-gray-300 mb-2 md:mb-0"><span class="text-amber-400 font-semibold">From ~$3.50/round lot</span></div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Raw spreads available</div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Competitive</div>
+    <div class="text-xs text-gray-500">Volume discounts available</div>
+  </div>
+
+  <!-- 3 Step Funded -->
+  <div class="bg-surface-800 border border-surface-700 rounded-xl p-4 md:grid md:grid-cols-5 md:gap-3 md:items-center">
+    <div class="font-bold text-white mb-2 md:mb-0">3 Step Funded</div>
+    <div class="text-sm text-gray-300 mb-2 md:mb-0"><span class="text-amber-400 font-semibold">From ~$2.50/round lot</span></div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Raw spreads</div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Reasonable</div>
+    <div class="text-xs text-gray-500">Lower cost for high volume</div>
+  </div>
+
+  <!-- MyFundedFutures -->
+  <div class="bg-surface-900 border border-surface-700 rounded-xl p-4 md:grid md:grid-cols-5 md:gap-3 md:items-center">
+    <div class="font-bold text-white mb-2 md:mb-0">MyFundedFutures</div>
+    <div class="text-sm text-gray-300 mb-2 md:mb-0"><span class="text-amber-400 font-semibold">~$2.50-3.50/round turn</span></div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">Futures-specific</div>
+    <div class="text-sm text-gray-400 mb-2 md:mb-0">N/A</div>
+    <div class="text-xs text-gray-500">Futures only, transparent pricing</div>
+  </div>
+</div>
 
 <h2 class="text-xl font-bold text-white mt-8 mb-4">Why Spread Markups Matter More Than You Think</h2>
 <p class="mb-4">Spread markups are the sneakiest cost in prop trading because they're invisible. You don't see a line item that says "spread markup: $X." It's just baked into the price you pay. But mathematically, it works like a silent tax on every trade.</p>
