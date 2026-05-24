@@ -3,7 +3,6 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { propFirms } from "@/data/propfirms";
-import { blogPosts } from "@/data/posts";
 import { PropFirm, FilterState } from "@/types/propfirm";
 
 function RatingBar({ label, value, max = 100 }: { label: string; value: number; max?: number }) {
@@ -230,16 +229,6 @@ export default function Home() {
     return firms;
   }, [filters]);
 
-  // Get top promos for above-fold display
-  const topPromos = useMemo(() => {
-    return propFirms
-      .filter((f) => f.promoCodes.length > 0)
-      .flatMap((firm) =>
-        firm.promoCodes.map((promo) => ({ firm, promo }))
-      )
-      .slice(0, 3);
-  }, []);
-
   return (
     <main className="min-h-screen">
       {/* Compact Hero */}
@@ -286,34 +275,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Promos - ABOVE FOLD, immediately visible */}
+      {/* Promos Coming Soon */}
       <section className="px-4 pb-6 max-w-5xl mx-auto">
-        <h2 className="text-sm font-bold mb-3 flex items-center gap-2">
-          <span>🔥</span> 
-          <span className="text-white">Active Promotions</span>
-          <span className="text-gray-500 font-normal">— click code to copy</span>
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          {topPromos.map(({ firm, promo }) => (
-            <Link key={`${firm.id}-${promo.code}`} href={`/firm/${firm.slug}`}>
-              <div className="bg-surface-800 border border-surface-700 rounded-xl p-3 hover:border-amber-500/40 transition-all group flex items-center justify-between">
-                <div className="flex items-center gap-2.5">
-                  <img src={firm.logo} alt={firm.name} className="w-8 h-8 rounded-lg object-cover bg-surface-700" />
-                  <div>
-                    <p className="font-semibold text-white text-xs">{firm.name}</p>
-                    <p className="text-amber-400 font-mono font-bold text-xs">{promo.code}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="text-right">
-                    <p className="text-sm font-extrabold text-gradient">{promo.discount}</p>
-                    <p className="text-xs text-gray-500">Exp: {promo.expiryDate}</p>
-                  </div>
-                  <CopyButton code={promo.code} />
-                </div>
-              </div>
-            </Link>
-          ))}
+        <div className="bg-surface-800/50 border border-surface-700 rounded-xl p-6 text-center">
+          <p className="text-gray-400 text-sm">Verified promotions coming soon.</p>
         </div>
       </section>
 
@@ -354,33 +319,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest Posts - subtle preview */}
+      {/* Blog Coming Soon */}
       <section className="px-4 pb-8 max-w-5xl mx-auto">
         <div className="border-t border-surface-800 pt-6">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-sm font-bold text-white flex items-center gap-2">
-              <span>📝</span> Latest from the Blog
-            </h2>
-            <Link href="/blog" className="text-xs text-amber-400 hover:text-amber-300 font-medium transition-colors">
-              View All →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            {blogPosts
-              .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-              .slice(0, 3)
-              .map((post) => (
-                <Link key={post.id} href={`/blog/${post.slug}`}>
-                  <div className="bg-surface-800/50 border border-surface-700 rounded-lg p-3 hover:border-amber-500/30 transition-all group">
-                    <p className="text-xs text-amber-400 font-medium mb-1">{post.category}</p>
-                    <h3 className="text-sm font-semibold text-white group-hover:text-amber-400 transition-colors mb-1 line-clamp-2 leading-snug">
-                      {post.title}
-                    </h3>
-                    <p className="text-xs text-gray-500">{post.date}</p>
-                  </div>
-                </Link>
-              ))}
-          </div>
+          <p className="text-center text-gray-500 text-sm">Blog coming soon — reviews and guides being verified.</p>
         </div>
       </section>
 
