@@ -20,12 +20,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   
   if (!post) {
     return {
-      title: "Post Not Found - PropBargains Blog",
+      title: "Post Not Found - FindYourProp Blog",
     };
   }
 
   return {
-    title: `${post.title} | PropBargains Blog`,
+    title: `${post.title} | FindYourProp Blog`,
     description: post.excerpt,
     keywords: post.keywords,
     openGraph: {
@@ -260,10 +260,10 @@ export default async function BlogPostPage({ params }: Props) {
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
           </div>
-          <span className="font-bold text-white">PropBargains</span>
+          <span className="font-bold text-white">FindYourProp</span>
         </div>
         <p className="text-gray-500 text-sm">
-          © 2026 PropBargains — Your one stop shop for Prop Traders
+          © 2026 FindYourProp — Your one stop shop for Prop Traders
         </p>
       </footer>
     </main>

@@ -183,7 +183,7 @@ export default function BlogPage() {
               📰 Prop Trading Insights
             </div>
             <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-              <span className="text-gradient">PropBargains</span> Blog
+              <span className="text-gradient">FindYourProp</span> Blog
             </h1>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">
               Expert reviews, trading guides, and firm news to help you make smarter
@@ -258,10 +258,10 @@ export default function BlogPage() {
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
           </div>
-          <span className="font-bold text-white">PropBargains</span>
+          <span className="font-bold text-white">FindYourProp</span>
         </div>
         <p className="text-gray-500 text-sm">
-          © 2026 PropBargains — Your one stop shop for Prop Traders
+          © 2026 FindYourProp — Your one stop shop for Prop Traders
         </p>
       </footer>
     </main>

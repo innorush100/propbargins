@@ -254,7 +254,7 @@ export default function Home() {
                 </svg>
               </div>
               <h1 className="text-2xl font-extrabold">
-                PropBargains
+                FindYourProp
               </h1>
             </div>
             <nav className="flex items-center gap-4">
@@ -325,43 +325,13 @@ export default function Home() {
       {/* Main Content - Firm Listings */}
       <section className="px-4 pb-16 max-w-5xl mx-auto">
         {/* Filters - compact inline bar */}
-        <FilterBar filters={filters} onChange={setFilters} />
-
-        {/* Results Count */}
-        <div className="flex items-center justify-between mb-4">
-          <p className="text-gray-400 text-sm">
-            Showing <span className="text-white font-semibold">{filteredFirms.length}</span> firms
-          </p>
-          <p className="text-gray-500 text-xs">Sorted by {filters.sortBy.replace(/([A-Z])/g, ' $1').trim()}</p>
-        </div>
-
-        {/* Firm Grid - tighter cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredFirms.map((firm) => (
-            <FirmCard key={firm.id} firm={firm} />
-          ))}
-        </div>
-
-        {filteredFirms.length === 0 && (
-          <div className="text-center py-12 bg-surface-800/50 rounded-xl border border-surface-700">
-            <p className="text-gray-400 mb-2">No firms match your search</p>
-            <button
-              onClick={() =>
-                setFilters({
-                  search: "",
-                  minProfitSplit: 0,
-                  maxDrawdown: 10,
-                  minPayoutSpeed: 0,
-                  sortBy: "overallScore",
-                  sortOrder: "desc",
-                })
-              }
-              className="text-amber-400 hover:text-amber-300 text-sm font-medium transition-colors"
-            >
-              Clear all filters
-            </button>
+        <div className="flex items-center justify-center py-16">
+          <div className="text-center max-w-md">
+            <div className="text-4xl mb-4">🔍</div>
+            <h2 className="text-xl font-bold text-white mb-2">Coming Soon</h2>
+            <p className="text-gray-400 text-sm">Full firm listings and verified data coming soon. We're working to bring you accurate, up-to-date prop firm information. Check back soon!</p>
           </div>
-        )}
+        </div>
       </section>
 
       {/* Tiny Newsletter - inline single line */}

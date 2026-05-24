@@ -92,7 +92,7 @@ export default function CalculatorPage() {
               </svg>
             </div>
             <span className="font-bold text-xl">
-              <span className="text-gradient">PropBargains</span>
+              <span className="text-gradient">FindYourProp</span>
             </span>
           </Link>
           <div className="flex items-center gap-1">
@@ -421,10 +421,10 @@ export default function CalculatorPage() {
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
             </svg>
           </div>
-          <span className="font-bold text-white">PropBargains</span>
+          <span className="font-bold text-white">FindYourProp</span>
         </div>
         <p className="text-gray-500 text-sm">
-          © 2026 PropBargains — Your one stop shop for Prop Traders
+          © 2026 FindYourProp — Your one stop shop for Prop Traders
         </p>
         <p className="text-gray-600 text-xs mt-2">
           Calculator estimates are for illustration only. Actual results may vary.

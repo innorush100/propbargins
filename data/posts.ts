@@ -62,7 +62,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2 class="text-xl font-bold text-white mt-8 mb-4">Final Thoughts</h2>
 <p class="mb-4">The prop firm landscape in 2026 is more competitive than ever. Firms are competing aggressively on profit splits, evaluation costs, and trader-friendly rules. If you're a profitable day trader, you have more options than at any point in the industry's history.</p>
-<p class="mb-4">Our recommendation: Start with The Trading Pit or FTMO for their balance of quality and reputation, but always check current promo codes on PropBargains to maximize your evaluation discount.</p>
+<p class="mb-4">Our recommendation: Start with The Trading Pit or FTMO for their balance of quality and reputation, but always check current promo codes on FindYourProp to maximize your evaluation discount.</p>
     `,
     category: "Reviews",
     date: "2026-05-15",
