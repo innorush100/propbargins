@@ -253,7 +253,7 @@ export default function Home() {
                 </svg>
               </div>
               <h1 className="text-2xl font-extrabold">
-                <span className="text-gradient">PropBargains</span>
+                PropBargains
               </h1>
             </div>
             <nav className="flex items-center gap-4">
@@ -391,10 +391,10 @@ export default function Home() {
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
             </svg>
           </div>
-          <span className="font-bold text-white text-sm">PropBargains</span>
+          <span className="font-bold text-white text-sm">FindYourProp</span>
         </div>
         <p className="text-gray-500 text-xs">
-          © 2026 PropBargains — Your one stop shop for Prop Traders
+          © 2026 FindYourProp — Your one stop shop for Prop Traders
         </p>
       </footer>
     </main>
