@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "PropBargains - Your One Stop Shop for Prop Traders",
+  title: "FindYourProp - Your One Stop Shop for Prop Traders",
   description: "Compare the best prop trading firms side-by-side. Find exclusive promo codes, compare profit splits up to 95%, and choose the perfect funded trading firm for your strategy.",
   keywords: "prop firm, prop trading, funded trader, prop firm promo code, best prop firm, trading firms, profit split, forex prop firm, funded account",
 };
