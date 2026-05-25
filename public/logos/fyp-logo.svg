@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#0A0E1A" rx="20"/>
+  
+  <!-- Fibonacci grid lines - descending -->
+  <!-- 78.6% level -->
+  <line x1="20" y1="60" x2="120" y2="60" stroke="#F59E0B" stroke-width="2" stroke-opacity="0.9"/>
+  <text x="125" y="64" fill="#F59E0B" font-size="10" font-family="monospace" font-weight="bold">78.6</text>
+  
+  <!-- 61.8% level (Golden ratio) -->
+  <line x1="20" y1="90" x2="120" y2="90" stroke="#F59E0B" stroke-width="2.5" stroke-opacity="1"/>
+  <text x="125" y="94" fill="#F59E0B" font-size="10" font-family="monospace" font-weight="bold">61.8</text>
+  
+  <!-- 50% level -->
+  <line x1="20" y1="115" x2="120" y2="115" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="125" y="119" fill="#F59E0B" font-size="10" font-family="monospace" font-weight="bold">50.0</text>
+  
+  <!-- 38.2% level -->
+  <line x1="20" y1="140" x2="120" y2="140" stroke="#F59E0B" stroke-width="2" stroke-opacity="0.8"/>
+  <text x="125" y="144" fill="#F59E0B" font-size="10" font-family="monospace" font-weight="bold">38.2</text>
+  
+  <!-- 23.6% level -->
+  <line x1="20" y1="162" x2="120" y2="162" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="125" y="166" fill="#F59E0B" font-size="10" font-family="monospace" font-weight="bold">23.6</text>
+  
+  <!-- FYP Letters styled as candlesticks / chart bars -->
+  <!-- F - tall bar -->
+  <rect x="35" y="85" width="14" height="75" fill="#F59E0B" rx="2"/>
+  
+  <!-- Y - two bars meeting -->
+  <rect x="65" y="95" width="14" height="65" fill="#F59E0B" rx="2"/>
+  <line x1="72" y1="95" x2="79" y2="75" stroke="#F59E0B" stroke-width="14" stroke-linecap="round"/>
+  
+  <!-- P - bar with rounded top -->
+  <rect x="95" y="110" width="14" height="50" fill="#F59E0B" rx="2"/>
+  <path d="M109 110 Q125 110 125 125 Q125 140 109 140" fill="none" stroke="#F59E0B" stroke-width="14" stroke-linecap="round"/>
+  
+  <!-- Decorative price arrow -->
+  <path d="M150 150 L170 130 L160 130 L160 120 L180 120 L155 150 Z" fill="#F59E0B" opacity="0.7"/>
+</svg>

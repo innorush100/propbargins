@@ -1,5 +1,4 @@
 export interface Rating {
-  "Evaluation Cost": number;
   "Profit Split": number;
   "Drawdown Rules": number;
   "Payout Speed": number;
@@ -43,8 +42,7 @@ export interface PropFirm {
 export interface FilterState {
   search: string;
   minProfitSplit: number;
-  maxDrawdown: number;
   minPayoutSpeed: number;
-  sortBy: 'overallScore' | 'profitSplit' | 'evalCost' | 'payoutSpeed';
+  sortBy: 'profitSplit' | 'payoutSpeed';
   sortOrder: 'asc' | 'desc';
 }

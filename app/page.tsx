@@ -59,7 +59,7 @@ function CopyButton({ code }: { code: string }) {
 function FirmCard({ firm }: { firm: PropFirm }) {
   return (
     <Link href={`/firm/${firm.slug}`}>
-      <div className="firm-card bg-surface-800 border border-surface-700 rounded-xl p-4 hover:border-amber-500/40 group relative overflow-hidden">
+      <div className="firm-card bg-surface-800 border border-surface-700 rounded-xl p-4 hover:border-amber-500/40 group relative overflow-hidden h-[320px] flex flex-col">
         <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-amber-500/10 to-transparent rounded-bl-full" />
         
         <div className="flex items-start justify-between mb-3 relative">
@@ -73,54 +73,75 @@ function FirmCard({ firm }: { firm: PropFirm }) {
               <h3 className="font-bold text-sm text-white group-hover:text-amber-400 transition-colors">
                 {firm.name}
               </h3>
-              <p className="text-xs text-gray-500">Est. {firm.established ?? "Data being verified"}</p>
+              <p className="text-xs text-gray-500">{firm.established ? `Est. ${firm.established}` : "Est. Data being verified"}</p>
             </div>
-          </div>
-          <div className="text-right flex-shrink-0 ml-3">
-            <div className="text-2xl font-extrabold text-gradient">{firm.overallScore}</div>
-            <div className="text-xs text-gray-500 uppercase tracking-wide">Overall</div>
           </div>
         </div>
 
         <p className="text-xs text-gray-400 mb-3 line-clamp-2 leading-relaxed">{firm.description}</p>
 
+        <div className="flex flex-wrap gap-1.5 mb-3">
+          {firm.instruments?.map((inst) => (
+            <span key={inst} className="text-xs bg-surface-700 text-gray-400 px-2 py-0.5 rounded-full">
+              {inst}
+            </span>
+          ))}
+          {firm.slug === "apex-trader-funding" && (
+            <span className="text-xs bg-emerald-900/20 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-500/20">
+              $800M+ Paid
+            </span>
+          )}
+        </div>
+
         <div className="space-y-1 mb-3">
-          <RatingBar label="Profit Split" value={firm.rating["Profit Split"]} />
-          <RatingBar label="Payout Speed" value={firm.rating["Payout Speed"]} />
-          <RatingBar label="Eval Cost" value={100 - firm.rating["Evaluation Cost"]} />
+          {firm.slug === "take-profit-trader" ? (
+            <>
+              <RatingBar label="Pro Profit Split" value={80} />
+              <RatingBar label="Pro+ Profit Split" value={90} />
+            </>
+          ) : (
+            <RatingBar label="Profit Split" value={100} />
+          )}
         </div>
 
         <div className="grid grid-cols-2 gap-2 mb-3">
           <div className="bg-surface-700/50 rounded-lg p-2">
-            <p className="text-xs text-gray-500 mb-0.5">Profit Split</p>
-            <p className="font-bold text-amber-400 text-sm">{firm.rating["Profit Split"]}%</p>
-          </div>
-          <div className="bg-surface-700/50 rounded-lg p-2">
             <p className="text-xs text-gray-500 mb-0.5">Max Funding</p>
             <p className="font-bold text-white text-sm">{firm.maxFunding}</p>
           </div>
+          {firm.promoCodes[0] && (
+            <div className="bg-surface-700/50 rounded-lg p-2">
+              <p className="text-xs text-gray-500 mb-0.5">Coupon Price</p>
+              <p className="font-bold text-amber-400 text-sm">{firm.promoCodes[0].discount} off</p>
+            </div>
+          )}
         </div>
 
-        <div className="flex flex-wrap gap-1.5 mb-3">
-          {firm.features.slice(0, 3).map((feature) => (
+        <div className="flex flex-wrap gap-1.5 mb-3 flex-1 items-start">
+          {firm.features.slice(0, 3).map((feature, i) => (
             <span
-              key={feature}
+              key={i}
               className="text-xs bg-surface-700 text-gray-300 px-2 py-0.5 rounded-full border border-surface-600"
             >
               {feature}
             </span>
           ))}
+          {[...Array(Math.max(0, 3 - firm.features.length))].map((_, i) => (
+            <span key={`placeholder-${i}`} className="text-xs px-2 py-0.5 text-transparent select-none">---</span>
+          ))}
         </div>
 
         <div className="flex items-center justify-between pt-3 border-t border-surface-700/50">
-          <div>
-            {firm.promoCodes.length > 0 && (
-              <span className="inline-flex items-center gap-1 text-xs bg-amber-500/20 text-amber-400 px-2 py-0.5 rounded-full border border-amber-500/30">
-                <span className="w-1 h-1 bg-amber-400 rounded-full" />
-                {firm.promoCodes.length} promo{firm.promoCodes.length > 1 ? "s" : ""}
-              </span>
-            )}
-          </div>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              window.open(firm.promoCodes[0]?.affiliateLink ?? firm.website, "_blank", "noopener,noreferrer");
+            }}
+            className="text-xs bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full border border-amber-500/30 hover:bg-amber-500/30 font-mono font-bold cursor-pointer"
+          >
+            {firm.promoCodes[0]?.code ?? "NOFEE50"}
+          </button>
           <span className="text-xs text-gray-400 group-hover:text-amber-400 transition-colors flex items-center gap-1">
             View
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -162,9 +183,7 @@ function FilterBar({
           }
           className="bg-surface-800 border border-surface-700 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20 transition-all cursor-pointer"
         >
-          <option value="overallScore">Score</option>
           <option value="profitSplit">Profit Split</option>
-          <option value="evalCost">Eval Cost</option>
           <option value="payoutSpeed">Payout Speed</option>
         </select>
         <select
@@ -188,7 +207,7 @@ export default function Home() {
     minProfitSplit: 0,
     maxDrawdown: 10,
     minPayoutSpeed: 0,
-    sortBy: "overallScore",
+    sortBy: "profitSplit",
     sortOrder: "desc",
   });
 
@@ -210,14 +229,11 @@ export default function Home() {
     firms.sort((a, b) => {
       let comparison = 0;
       switch (filters.sortBy) {
-        case "overallScore":
-          comparison = a.overallScore - b.overallScore;
-          break;
         case "profitSplit":
           comparison = a.rating["Profit Split"] - b.rating["Profit Split"];
           break;
         case "evalCost":
-          comparison = a.rating["Evaluation Cost"] - b.rating["Evaluation Cost"];
+          comparison = 0;
           break;
         case "payoutSpeed":
           comparison = a.rating["Payout Speed"] - b.rating["Payout Speed"];
@@ -275,10 +291,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Promos Coming Soon */}
+      {/* Latest Blog Posts */}
       <section className="px-4 pb-6 max-w-5xl mx-auto">
-        <div className="bg-surface-800/50 border border-surface-700 rounded-xl p-6 text-center">
-          <p className="text-gray-400 text-sm">Verified promotions coming soon.</p>
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-xs text-gray-500">Latest Posts</p>
+          <Link href="/blog" className="text-xs text-gray-500 hover:text-amber-400 transition-colors">
+            All posts →
+          </Link>
+        </div>
+        <div className="space-y-2">
+          <a href="/blog/tradeify-sets-the-bar" className="block text-sm text-amber-400 hover:text-amber-300 font-medium transition-colors">
+            Tradeify Sets The Bar: How One Firm Changed Prop Trading Forever →
+          </a>
+          <a href="/blog/lucid-changes-the-game" className="block text-sm text-amber-400 hover:text-amber-300 font-medium transition-colors">
+            Lucid Changes the Game: The End of Monthly Subscription Evals? →
+          </a>
         </div>
       </section>
 
@@ -289,14 +316,28 @@ export default function Home() {
 
       {/* Main Content - Firm Listings */}
       <section className="px-4 pb-16 max-w-5xl mx-auto">
-        {/* Filters - compact inline bar */}
-        <div className="flex items-center justify-center py-16">
-          <div className="text-center max-w-md">
-            <div className="text-4xl mb-4">🔍</div>
-            <h2 className="text-xl font-bold text-white mb-2">Coming Soon</h2>
-            <p className="text-gray-400 text-sm">Full firm listings and verified data coming soon. We're working to bring you accurate, up-to-date prop firm information. Check back soon!</p>
+        {filteredFirms.length > 0 ? (
+          <>
+            {/* Filters - compact inline bar */}
+            <div className="flex items-center justify-between mb-4">
+              <p className="text-sm text-gray-400">Showing {filteredFirms.length} firms</p>
+              <p className="text-xs text-gray-500">Sorted by {filters.sortBy}</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filteredFirms.map((firm) => (
+                <FirmCard key={firm.id} firm={firm} />
+              ))}
+            </div>
+          </>
+        ) : (
+          <div className="flex items-center justify-center py-16">
+            <div className="text-center max-w-md">
+              <div className="text-4xl mb-4">🔍</div>
+              <h2 className="text-xl font-bold text-white mb-2">No firms found</h2>
+              <p className="text-gray-400 text-sm">Try adjusting your filters or search terms.</p>
+            </div>
           </div>
-        </div>
+        )}
       </section>
 
       {/* Tiny Newsletter - inline single line */}
@@ -316,13 +357,6 @@ export default function Home() {
               Subscribe
             </button>
           </form>
-        </div>
-      </section>
-
-      {/* Blog Coming Soon */}
-      <section className="px-4 pb-8 max-w-5xl mx-auto">
-        <div className="border-t border-surface-800 pt-6">
-          <p className="text-center text-gray-500 text-sm">Blog coming soon — reviews and guides being verified.</p>
         </div>
       </section>
 

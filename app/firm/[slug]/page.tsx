@@ -50,15 +50,9 @@ export default function FirmPage({ params }: Props) {
             className="w-20 h-20 rounded-xl object-cover bg-gray-800"
           />
           <div className="flex-1">
-            <div className="flex items-start justify-between">
-              <div>
-                <h1 className="text-3xl font-bold text-white mb-1">{firm.name}</h1>
-                <p className="text-gray-500">Est. {firm.established ?? "Data being verified"}</p>
-              </div>
-              <div className="text-right">
-                <div className="text-4xl font-bold text-emerald-400">{firm.overallScore}</div>
-                <div className="text-sm text-gray-500">Overall Score</div>
-              </div>
+            <div>
+              <h1 className="text-3xl font-bold text-white mb-1">{firm.name}</h1>
+              <p className="text-gray-500">Est. {firm.established ?? "Data being verified"}</p>
             </div>
           </div>
         </div>
@@ -71,30 +65,13 @@ export default function FirmPage({ params }: Props) {
               {inst}
             </span>
           ))}
+          {firm.slug === "apex-trader-funding" && (
+            <span className="text-xs bg-emerald-900/30 text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/30">
+              Over $800M Paid to Traders
+            </span>
+          )}
         </div>
       </header>
-
-      {/* Ratings Grid */}
-      <section className="bg-gray-900 border border-gray-800 rounded-xl p-6 mb-6">
-        <h2 className="text-xl font-bold mb-4">Ratings & Scores</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {Object.entries(firm.rating).map(([category, score]) => (
-            <div key={category} className="bg-gray-800 rounded-lg p-4">
-              <p className="text-sm text-gray-500 mb-1">{category}</p>
-              <div className="flex items-center gap-2">
-                <div className="text-2xl font-bold text-white">{score}</div>
-                <div className="text-sm text-gray-500">/10</div>
-              </div>
-              <div className="mt-2 h-2 bg-gray-700 rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-gradient-to-r from-emerald-500 to-emerald-400"
-                  style={{ width: `${score * 10}%` }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* Features & Info */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -160,6 +137,201 @@ export default function FirmPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {/* Account Details */}
+      <section className="bg-gray-900 border border-gray-800 rounded-xl p-6 mb-6">
+        {firm.slug === "apex-trader-funding" ? (
+          <>
+            {/* EOD Accounts */}
+            <h2 className="text-xl font-bold mb-2">EOD Drawdown Accounts</h2>
+            <p className="text-xs text-gray-500 mb-4">End-of-Day drawdown — lower risk, position held overnight</p>
+            <div className="overflow-x-auto mb-8">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-gray-700">
+                    <th className="text-left py-3 px-4 text-gray-400 font-medium">Account</th>
+                    <th className="text-right py-3 px-4 text-gray-400 font-medium">Full Price</th>
+                    <th className="text-right py-3 px-4 text-gray-400 font-medium">Coupon (90% Off)</th>
+                    <th className="text-right py-3 px-4 text-gray-400 font-medium">Activation Fee</th>
+                    <th className="text-right py-3 px-4 text-gray-400 font-medium">All-In</th>
+                    <th className="text-right py-3 px-4 text-gray-400 font-medium">Profit Target</th>
+                    <th className="text-right py-3 px-4 text-gray-400 font-medium">Max Drawdown</th>
+                    <th className="text-right py-3 px-4 text-gray-400 font-medium">Daily Loss</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-800 hover:bg-gray-800/50">
+                    <td className="py-3 px-4 font-semibold text-white">25K</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$349</td>
+                    <td className="py-3 px-4 text-right text-amber-400">$34.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$119</td>
+                    <td className="py-3 px-4 text-right text-emerald-400 font-bold">$153.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$1,500</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$1,000</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$500</td>
+                  </tr>
+                  <tr className="border-b border-gray-800 hover:bg-gray-800/50">
+                    <td className="py-3 px-4 font-semibold text-white">50K</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$399</td>
+                    <td className="py-3 px-4 text-right text-amber-400">$39.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$129</td>
+                    <td className="py-3 px-4 text-right text-emerald-400 font-bold">$168.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$3,000</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$2,000</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$1,000</td>
+                  </tr>
+                  <tr className="border-b border-gray-800 hover:bg-gray-800/50">
+                    <td className="py-3 px-4 font-semibold text-white">100K</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$599</td>
+                    <td className="py-3 px-4 text-right text-amber-400">$59.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$149</td>
+                    <td className="py-3 px-4 text-right text-emerald-400 font-bold">$208.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$6,000</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$3,000</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$1,500</td>
+                  </tr>
+                  <tr className="hover:bg-gray-800/50">
+                    <td className="py-3 px-4 font-semibold text-white">150K</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$899</td>
+                    <td className="py-3 px-4 text-right text-amber-400">$89.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$169</td>
+                    <td className="py-3 px-4 text-right text-emerald-400 font-bold">$258.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$9,000</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$4,000</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$2,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Intraday Accounts */}
+            <h2 className="text-xl font-bold mb-2">Intraday Drawdown Accounts</h2>
+            <p className="text-xs text-gray-500 mb-4">Intraday drawdown — no overnight holds, tighter tracking</p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-gray-700">
+                    <th className="text-left py-3 px-4 text-gray-400 font-medium">Account</th>
+                    <th className="text-right py-3 px-4 text-gray-400 font-medium">Full Price</th>
+                    <th className="text-right py-3 px-4 text-gray-400 font-medium">Coupon (90% Off)</th>
+                    <th className="text-right py-3 px-4 text-gray-400 font-medium">Activation Fee</th>
+                    <th className="text-right py-3 px-4 text-gray-400 font-medium">All-In</th>
+                    <th className="text-right py-3 px-4 text-gray-400 font-medium">Profit Target</th>
+                    <th className="text-right py-3 px-4 text-gray-400 font-medium">Max Drawdown</th>
+                    <th className="text-right py-3 px-4 text-gray-400 font-medium">Daily Loss</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-800 hover:bg-gray-800/50">
+                    <td className="py-3 px-4 font-semibold text-white">25K</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$249</td>
+                    <td className="py-3 px-4 text-right text-amber-400">$24.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$89</td>
+                    <td className="py-3 px-4 text-right text-emerald-400 font-bold">$113.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$1,500</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$1,000</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$500</td>
+                  </tr>
+                  <tr className="border-b border-gray-800 hover:bg-gray-800/50">
+                    <td className="py-3 px-4 font-semibold text-white">50K</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$299</td>
+                    <td className="py-3 px-4 text-right text-amber-400">$29.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$99</td>
+                    <td className="py-3 px-4 text-right text-emerald-400 font-bold">$128.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$3,000</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$2,000</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$1,000</td>
+                  </tr>
+                  <tr className="border-b border-gray-800 hover:bg-gray-800/50">
+                    <td className="py-3 px-4 font-semibold text-white">100K</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$449</td>
+                    <td className="py-3 px-4 text-right text-amber-400">$44.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$129</td>
+                    <td className="py-3 px-4 text-right text-emerald-400 font-bold">$173.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$6,000</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$3,000</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$1,500</td>
+                  </tr>
+                  <tr className="hover:bg-gray-800/50">
+                    <td className="py-3 px-4 font-semibold text-white">150K</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$699</td>
+                    <td className="py-3 px-4 text-right text-amber-400">$69.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$149</td>
+                    <td className="py-3 px-4 text-right text-emerald-400 font-bold">$218.90</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$9,000</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$4,000</td>
+                    <td className="py-3 px-4 text-right text-gray-300">$2,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-gray-700">
+                  <th className="text-left py-3 px-4 text-gray-400 font-medium">Account</th>
+                  <th className="text-right py-3 px-4 text-gray-400 font-medium">Monthly Cost</th>
+                  <th className="text-right py-3 px-4 text-gray-400 font-medium">Coupon Price</th>
+                  <th className="text-right py-3 px-4 text-gray-400 font-medium">Profit Target</th>
+                  <th className="text-right py-3 px-4 text-gray-400 font-medium">Max Drawdown</th>
+                  <th className="text-right py-3 px-4 text-gray-400 font-medium">Contracts</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-800 hover:bg-gray-800/50">
+                  <td className="py-3 px-4 font-semibold text-white">25K</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$150</td>
+                  <td className="py-3 px-4 text-right text-amber-400">$75</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$1,500</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$1,500</td>
+                  <td className="py-3 px-4 text-right text-gray-300">3 minis / 30 micros</td>
+                </tr>
+                <tr className="border-b border-gray-800 hover:bg-gray-800/50">
+                  <td className="py-3 px-4 font-semibold text-white">50K</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$170</td>
+                  <td className="py-3 px-4 text-right text-amber-400">$85</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$3,000</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$2,000</td>
+                  <td className="py-3 px-4 text-right text-gray-300">6 minis / 60 micros</td>
+                </tr>
+                <tr className="border-b border-gray-800 hover:bg-gray-800/50">
+                  <td className="py-3 px-4 font-semibold text-white">75K</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$245</td>
+                  <td className="py-3 px-4 text-right text-amber-400">$123</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$4,500</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$2,500</td>
+                  <td className="py-3 px-4 text-right text-gray-300">9 minis / 90 micros</td>
+                </tr>
+                <tr className="border-b border-gray-800 hover:bg-gray-800/50">
+                  <td className="py-3 px-4 font-semibold text-white">100K</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$330</td>
+                  <td className="py-3 px-4 text-right text-amber-400">$165</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$6,000</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$3,000</td>
+                  <td className="py-3 px-4 text-right text-gray-300">12 minis / 120 micros</td>
+                </tr>
+                <tr className="hover:bg-gray-800/50">
+                  <td className="py-3 px-4 font-semibold text-white">150K</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$360</td>
+                  <td className="py-3 px-4 text-right text-amber-400">$180</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$9,000</td>
+                  <td className="py-3 px-4 text-right text-gray-300">$4,500</td>
+                  <td className="py-3 px-4 text-right text-gray-300">15 minis / 150 micros</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        )}
+        <div className="mt-4 flex flex-wrap gap-4 text-xs text-gray-400">
+          <span>Commission: {firm.commissionInfo?.futures ?? "Contact firm"}</span>
+          <span>•</span>
+          <span>Max Accounts: {firm.maxFunding}</span>
+          <span>•</span>
+          <span>TrustPilot: 4.3 (19,224 reviews)</span>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="bg-gradient-to-r from-emerald-900/50 to-gray-900 border border-emerald-500/30 rounded-xl p-6 text-center">

@@ -158,15 +158,25 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="flex flex-col lg:flex-row gap-10">
             {/* Main Content */}
             <article className="flex-1 min-w-0">
-              {/* Featured image placeholder */}
-              <div className="bg-gradient-to-br from-amber-500/20 to-surface-900 rounded-2xl h-64 mb-8 flex items-center justify-center border border-surface-700">
-                <div className="text-amber-500/30 text-7xl">
-                  {post.category === "Firm News" && "📰"}
-                  {post.category === "Reviews" && "⭐"}
-                  {post.category === "Guides" && "📚"}
-                  {post.category === "Deals" && "🔥"}
+              {/* Featured image */}
+              {post.featuredImage ? (
+                <div className="rounded-2xl h-64 mb-8 overflow-hidden flex items-center justify-center border border-surface-700 bg-surface-800">
+                  <img
+                    src={post.featuredImage}
+                    alt={post.title}
+                    className="max-w-full max-h-full object-contain"
+                  />
                 </div>
-              </div>
+              ) : (
+                <div className="bg-gradient-to-br from-amber-500/20 to-surface-900 rounded-2xl h-64 mb-8 flex items-center justify-center border border-surface-700">
+                  <div className="text-amber-500/30 text-7xl">
+                    {post.category === "Firm News" && "📰"}
+                    {post.category === "Reviews" && "⭐"}
+                    {post.category === "Guides" && "📚"}
+                    {post.category === "Deals" && "🔥"}
+                  </div>
+                </div>
+              )}
 
               {/* Article body */}
               <div
