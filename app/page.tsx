@@ -205,7 +205,6 @@ export default function Home() {
   const [filters, setFilters] = useState<FilterState>({
     search: "",
     minProfitSplit: 0,
-    maxDrawdown: 10,
     minPayoutSpeed: 0,
     sortBy: "profitSplit",
     sortOrder: "desc",
@@ -231,9 +230,6 @@ export default function Home() {
       switch (filters.sortBy) {
         case "profitSplit":
           comparison = a.rating["Profit Split"] - b.rating["Profit Split"];
-          break;
-        case "evalCost":
-          comparison = 0;
           break;
         case "payoutSpeed":
           comparison = a.rating["Payout Speed"] - b.rating["Payout Speed"];
