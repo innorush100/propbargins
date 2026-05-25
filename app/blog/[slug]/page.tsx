@@ -202,7 +202,7 @@ export default async function BlogPostPage({ params }: Props) {
               {/* Related Posts */}
               {relatedPosts.length > 0 && (
                 <div className="mt-10 pt-6 border-t border-surface-700">
-                  <h3 className="text-lg font-bold text-white mb-5">More in {post.category}</h3>
+                  <h3 className="text-lg font-bold text-white mb-5">More in {post.category === "Firm News" ? "Prop Firm News" : post.category}</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {relatedPosts.map((relatedPost) => (
                       <Link
