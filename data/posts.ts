@@ -49,7 +49,7 @@ export const blogPosts: BlogPost[] = [
     date: "2026-05-25",
     author: "FYP Team",
     readTime: "4 min",
-    keywords: ["Lucid", "prop firm", "evaluation", "unlimited time", "one-time payment", "review"],
+    keywords: ["Tradeify", "prop firm", "UI", "journal", "review", "innovation"],
     featured: true,
     featuredImage: "/logos/tradeify-logo.png",
     relatedFirms: []

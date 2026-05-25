@@ -177,24 +177,14 @@ function FilterBar({
       </div>
       <div className="flex gap-2">
         <select
-          value={filters.sortBy}
-          onChange={(e) =>
-            onChange({ ...filters, sortBy: e.target.value as FilterState["sortBy"] })
-          }
-          className="bg-surface-800 border border-surface-700 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20 transition-all cursor-pointer"
-        >
-          <option value="profitSplit">Profit Split</option>
-          <option value="payoutSpeed">Payout Speed</option>
-        </select>
-        <select
           value={filters.sortOrder}
           onChange={(e) =>
             onChange({ ...filters, sortOrder: e.target.value as FilterState["sortOrder"] })
           }
           className="bg-surface-800 border border-surface-700 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20 transition-all cursor-pointer"
         >
-          <option value="desc">High</option>
-          <option value="asc">Low</option>
+          <option value="desc">High to Low</option>
+          <option value="asc">Low to High</option>
         </select>
       </div>
     </div>
@@ -317,7 +307,7 @@ export default function Home() {
             {/* Filters - compact inline bar */}
             <div className="flex items-center justify-between mb-4">
               <p className="text-sm text-gray-400">Showing {filteredFirms.length} firms</p>
-              <p className="text-xs text-gray-500">Sorted by {filters.sortBy}</p>
+              <p className="text-xs text-gray-500">Sorted by Profit Split</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {filteredFirms.map((firm) => (

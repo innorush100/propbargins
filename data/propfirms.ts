@@ -63,7 +63,7 @@ export const propFirms: PropFirm[] = [
       }
     ],
     maxFunding: "$150K",
-    established: 2022,
+    established: 2021,
     instruments: ["Futures"],
     supportedPlatforms: ["Rithmic", "Tradovate", "Wealthcharts"],
     commissionInfo: {
